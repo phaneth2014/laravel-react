@@ -16,7 +16,7 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
 	Route::post('/items',[ItemController::class, 'store_item']);
 	Route::get('/items/item',[ItemController::class, 'pick_item']);
 
-	Route::get('/user', function (Request $request) {
+	Route::get('/get-user', function (Request $request) {
         return User::all();
     });
 });
